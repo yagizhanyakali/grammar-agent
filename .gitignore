@@ -1,0 +1,40 @@
+# Environment files with API keys
+.env
+.env.local
+
+# Node modules (if added in the future)
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+
+# Generated icons (users generate their own)
+icons/*.png
+
+# Extension packaging
+*.zip
+*.crx
+*.pem
+
+# Chrome storage data (if extracted for development)
+chrome-storage-dump.json
+
