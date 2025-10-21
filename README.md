@@ -1,17 +1,16 @@
-# Grammar Agent ✍️
+# Grammar Corrector ✍️
 
-A simple and privacy-focused Chrome extension for AI-powered grammar correction using OpenAI. Paste your text, get it corrected, and copy it back - no tracking, no monitoring of your inputs.
+A minimalist Chrome extension for AI-powered grammar and logic correction using OpenAI GPT-4o Mini. Clean, simple, and privacy-focused.
 
 ## Features
 
-✅ **Simple Interface** - Just paste your text and click correct  
-✅ **OpenAI-Powered** - Uses GPT-3.5-turbo for intelligent grammar correction  
-✅ **Privacy-Focused** - No tracking of your text inputs on web pages  
-✅ **No Data Storage** - Only your API key is stored locally  
-✅ **Clean Output** - Get only the corrected text, no explanations  
-✅ **Copy to Clipboard** - Quick copy button for easy use  
-✅ **Character Counter** - Track your text length  
-✅ **Beautiful UI** - Modern, gradient design
+✅ **Simple & Clean** - Minimalist black & white design, no distractions  
+✅ **GPT-4o Mini Powered** - Smart grammar, logic, and context correction  
+✅ **Logic & Context** - Fixes contradictions, unclear reasoning, and flow issues  
+✅ **Privacy First** - No tracking, no content scripts, only your API key stored  
+✅ **Inline Feedback** - No annoying popups, subtle error messages  
+✅ **5000 Character Limit** - Perfect for emails, posts, and documents  
+✅ **One-Click Copy** - Quick copy button for corrected text
 
 ## Installation
 
@@ -22,12 +21,10 @@ A simple and privacy-focused Chrome extension for AI-powered grammar correction 
 
 ### Installation Steps
 
-1. **Generate Icons** (required):
-   ```bash
-   # Open icons/generate_icons.html in your browser
-   # Click "Download All Icons" button
-   # Move the 4 PNG files to the icons/ folder
-   ```
+1. **Generate Icons** (if not already present):
+   - Open `icons/generate_icons.html` in your browser
+   - Click "Download All Icons" button
+   - Move the 4 PNG files to the `icons/` folder
 
 2. **Load Extension**:
    - Open Chrome and go to `chrome://extensions/`
@@ -35,193 +32,275 @@ A simple and privacy-focused Chrome extension for AI-powered grammar correction 
    - Click "Load unpacked"
    - Select the `grammar-agent` folder
 
-3. **Setup API Key**:
-   - Click the Grammar Agent icon in your toolbar
+3. **Setup API Key** (First time):
+   - Click the Grammar Corrector icon in your toolbar
+   - The settings panel will auto-appear if no key is saved
    - Enter your OpenAI API key
-   - Click "Save"
+   - Click "Save Key"
 
 ## Usage
 
+### Basic Workflow
+
 1. **Click the extension icon** to open the popup
-2. **Enter your OpenAI API key** (first time only) and click "Save"
-3. **Paste or type your text** in the input area
-4. **Click "Correct Grammar"** button
-5. **View the corrected text** in the output area
-6. **Click "Copy to Clipboard"** to copy the result
+2. **Paste or type your text** in the input area
+3. **Click "Correct Grammar"** button
+4. **View corrected text** in the output area below
+5. **Click the copy icon** to copy to clipboard
+
+### Settings
+
+- Click the ⚙️ icon in the header to show/hide API key settings
+- Update or change your API key anytime
+
+### Features
+
+**Character Counter**: Shows "0/5000" below input - tracks your text length
+
+**Clear Button**: Trash icon in the input area clears text instantly
+
+**Copy Button**: Copy icon in output area copies corrected text to clipboard
+
+**Smart Errors**: Error messages appear inline where relevant, no popups
+
+## What It Corrects
+
+The extension uses an advanced prompt that fixes:
+
+1. **Grammar & Mechanics** - Spelling, punctuation, syntax errors
+2. **Logical Flow** - Contradictions, unclear reasoning, missing steps
+3. **Sentence Structure** - Readability and coherence improvements
+4. **Context & Clarity** - Natural idea flow that makes sense
+5. **Consistency** - Tense, perspective, and style throughout
+6. **Word Choice** - Awkward or incorrect word usage
+7. **Tone Preservation** - Keeps your original meaning and voice
 
 ### Example
 
 **Input:**
 ```
-This are a example text with some grammar error. I has been working on this project for long time and want to make sure the grammer is correct.
+I went to the store yesterday. Tomorrow I bought milk. 
+The milk was expensive but cheap. I didn't buy it 
+because I purchased it.
 ```
 
 **Output:**
 ```
-This is an example text with some grammar errors. I have been working on this project for a long time and want to make sure the grammar is correct.
+I went to the store yesterday and bought milk. 
+The milk was expensive, so I decided not to purchase it.
 ```
 
-## How It Works
+The AI fixes tense issues, contradictions, and logical inconsistencies while preserving your intent.
 
-1. You paste text into the extension popup
-2. The extension sends your text + grammar correction prompt to OpenAI API
-3. OpenAI returns the corrected text
-4. You see the result and can copy it
+## Technical Details
 
-**Important:** The text is sent to OpenAI's API for processing. Your text is NOT stored by this extension, but OpenAI processes it according to their [privacy policy](https://openai.com/policies/privacy-policy).
+### Architecture
 
-## Grammar Correction Prompt
+- **Manifest Version**: 3 (latest Chrome standard)
+- **API**: OpenAI GPT-4o-mini
+- **Popup-Only**: No content scripts or background workers
+- **Storage**: Only API key stored locally
+- **Permissions**: Storage only (no tab access, no tracking)
 
-The extension uses this prompt template:
-
-```
-You are a professional grammar correction assistant. Your task is to:
-
-1. Correct all grammar, spelling, and punctuation errors
-2. Improve sentence structure and clarity
-3. Maintain the original meaning and tone
-4. Keep the same language as the input text
-
-Please correct the following text and return ONLY the corrected version without any explanations or additional comments:
-```
-
-You can modify this prompt in `popup.js` if you want different behavior.
-
-## Files Structure
+### Files Structure
 
 ```
 grammar-agent/
-├── manifest.json          # Extension configuration (Manifest V3)
-├── popup.html            # Popup interface HTML
-├── popup.css             # Popup styles
+├── manifest.json          # Extension configuration
+├── popup.html            # Popup interface (550px width)
+├── popup.css             # Minimalist black & white styling
 ├── popup.js              # OpenAI API integration
 ├── icons/                # Extension icons
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   ├── icon128.png
 │   ├── icon.svg
 │   └── generate_icons.html
 ├── README.md             # This file
-└── LICENSE               # MIT License
+├── QUICKSTART.md         # Quick setup guide
+├── LICENSE               # MIT License
+└── .gitignore           # Git ignore rules
 ```
+
+### Model Information
+
+**GPT-4o Mini**
+- Released 2024 by OpenAI
+- 10x cheaper than GPT-3.5-turbo
+- Better at following complex instructions
+- Excellent for grammar, logic, and context understanding
+- Fast response times (~2-3 seconds)
 
 ## Privacy & Security
 
-🔒 **Your Privacy is Important**
+🔒 **Complete Privacy**
 
-- **No Tracking**: This extension does NOT monitor or track text inputs on web pages
-- **No Content Scripts**: No code runs on websites you visit
-- **No Data Collection**: We don't collect or store any of your text
-- **API Key Stored Locally**: Your OpenAI API key is stored only in your browser's local storage
-- **No Background Processes**: Only runs when you open the popup
-- **Open Source**: Full source code available for inspection
+- **No Content Scripts**: Doesn't monitor or interact with web pages
+- **No Background Workers**: Only runs when popup is open
+- **No Data Collection**: Zero tracking or analytics
+- **No External Storage**: API key stored only in Chrome's local storage
+- **API Only**: Text is sent only to OpenAI when you click "Correct Grammar"
 
-**What gets sent to OpenAI:**
-- Only the text you explicitly paste/type in the extension popup
-- The grammar correction prompt
-- Your API key (for authentication)
+**What's Stored:**
+- Your OpenAI API key (encrypted by Chrome in local storage)
 
-**What's stored:**
-- Only your OpenAI API key (in Chrome's local storage)
+**What's Sent:**
+- Only the text you explicitly paste/type and submit
+- Your API key for authentication
+- Grammar correction prompt
+
+**Nothing Else**: No browsing history, no typing patterns, no user data
 
 ## API Costs
 
-This extension uses OpenAI's GPT-3.5-turbo model. Costs are:
-- ~$0.0015 per 1000 input tokens
-- ~$0.002 per 1000 output tokens
+### GPT-4o Mini Pricing
 
-Example: A 500-word text costs approximately $0.001-0.002 per correction.
+- **Input**: $0.00015 per 1K tokens
+- **Output**: $0.0006 per 1K tokens
+
+### Real-World Costs
+
+| Text Length | Approximate Cost |
+|-------------|------------------|
+| 100 words | ~$0.0002 |
+| 500 words | ~$0.0005 |
+| 1000 words | ~$0.001 |
+| 5000 words | ~$0.005 |
+
+**Example**: With $5 of credit, you can correct approximately **10,000 texts** of 500 words each.
 
 Check [OpenAI Pricing](https://openai.com/pricing) for current rates.
 
+## Design Philosophy
+
+This extension follows a minimalist design philosophy:
+
+- **Black & White Only**: No colors, no distractions
+- **No Popups**: Feedback is inline and subtle
+- **Compact**: 550px width, doesn't take over your screen
+- **Fast**: Minimal UI, quick interactions
+- **Professional**: Clean typography and spacing
+
 ## Troubleshooting
 
-### "Please save your OpenAI API key first"
+### Extension Not Responding
 
-**Solution**: Enter your API key in the top field and click "Save". Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys).
+1. Go to `chrome://extensions/`
+2. Find "Grammar Corrector"
+3. Click the reload icon (🔄)
+4. Try again
 
-### "Invalid API key"
+### API Key Issues
 
-**Solution**: Make sure your API key:
-- Starts with "sk-"
-- Is copied correctly without extra spaces
-- Is active and has available credits
+**Error: "Invalid API key"**
+- Make sure your key starts with `sk-`
+- Copy the complete key without extra spaces
+- Check key is active at [OpenAI Platform](https://platform.openai.com/api-keys)
 
-### "Rate limit exceeded"
+**Settings panel auto-appears**
+- This means no API key is saved
+- Enter your key and click "Save Key"
 
-**Solution**: You've sent too many requests. Wait a minute and try again. OpenAI has rate limits based on your account tier.
+### API Errors
 
-### "Quota exceeded"
+**Rate Limit**: Wait 60 seconds and try again
 
-**Solution**: Your OpenAI account has run out of credits. Add credits to your account at [OpenAI Billing](https://platform.openai.com/account/billing).
+**Quota Exceeded**: Add credits at [OpenAI Billing](https://platform.openai.com/account/billing)
 
-### Icons not showing
+**Network Error**: Check your internet connection
 
-**Solution**: 
-1. Open `icons/generate_icons.html` in your browser
-2. Click "Download All Icons"
-3. Move all 4 PNG files to the `icons/` folder
-4. Reload the extension
+**Invalid API Key**: The settings panel will open - update your key
+
+### No Output
+
+1. Check that you entered text in the input area
+2. Make sure you have an API key saved
+3. Look for error messages in the output placeholder
+4. Check browser console for errors (F12)
 
 ## Development
 
 ### Customize the Prompt
 
-Edit the `GRAMMAR_CORRECTION_PROMPT` constant in `popup.js`:
+Edit the `GRAMMAR_CORRECTION_PROMPT` in `popup.js` (lines 4-16):
 
 ```javascript
 const GRAMMAR_CORRECTION_PROMPT = `Your custom prompt here...`;
 ```
 
-### Change the AI Model
+### Change AI Model
 
-In `popup.js`, find the `callOpenAI` function and change the model:
-
-```javascript
-model: 'gpt-4', // Change from 'gpt-3.5-turbo'
-```
-
-Available models:
-- `gpt-3.5-turbo` - Fastest, cheapest (recommended)
-- `gpt-4` - More capable, slower, more expensive
-- `gpt-4-turbo` - Balance of speed and capability
-
-### Adjust AI Behavior
-
-Modify the `temperature` parameter in `popup.js`:
+In `popup.js`, find the `callOpenAI` function and update the model:
 
 ```javascript
-temperature: 0.3, // 0 = deterministic, 1 = creative
+model: 'gpt-4o-mini',     // Current (best value)
+model: 'gpt-4o',          // More powerful (~3x cost)
+model: 'gpt-4-turbo',     // Most powerful (~10x cost)
 ```
 
-Lower temperature (0-0.3) = More consistent corrections  
-Higher temperature (0.7-1.0) = More creative rewrites
+### Adjust Temperature
+
+Lower = more consistent, Higher = more creative:
+
+```javascript
+temperature: 0.3,  // 0-1 scale (current: 0.3)
+```
+
+### Modify Token Limit
+
+```javascript
+max_tokens: 2000,  // Increase for longer texts
+```
 
 ## Limitations
 
-- Requires internet connection
-- Requires OpenAI API key with credits
-- Maximum ~2000 tokens per request (adjust `max_tokens` in code if needed)
-- Text is sent to OpenAI for processing
-- Response time depends on OpenAI API speed (~2-5 seconds)
+- Requires internet connection for API calls
+- Requires OpenAI API key with available credits
+- 5000 character limit per correction
+- Text is processed by OpenAI (see their [Privacy Policy](https://openai.com/policies/privacy-policy))
+- Response time depends on OpenAI API (~2-5 seconds)
 
 ## Future Enhancements
 
-- [ ] Support for multiple AI providers (Anthropic, Google, etc.)
-- [ ] Custom prompt templates
-- [ ] History of corrections (opt-in)
-- [ ] Batch correction for multiple texts
-- [ ] Language detection and selection
-- [ ] Style presets (formal, casual, academic)
-- [ ] Diff view showing changes
-- [ ] Export corrected text to file
+- [ ] Multiple AI provider support (Anthropic Claude, Google Gemini)
+- [ ] Custom temperature and creativity settings
+- [ ] Different correction modes (strict, balanced, creative)
+- [ ] Language selection for non-English text
+- [ ] Dark mode option
+- [ ] Keyboard shortcuts
+- [ ] Correction history (opt-in)
+- [ ] Export/import settings
+- [ ] Batch processing for multiple texts
 
 ## Contributing
 
-Contributions welcome! Please:
+Contributions are welcome! To contribute:
 
 1. Fork the repository
-2. Create a feature branch
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Make your changes
 4. Test thoroughly
-5. Submit a pull request
+5. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+6. Push to the branch (`git push origin feature/AmazingFeature`)
+7. Open a Pull Request
+
+### Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/grammar-agent.git
+cd grammar-agent
+
+# Make your changes
+# No build step needed - vanilla JavaScript!
+
+# Load in Chrome
+# 1. Go to chrome://extensions/
+# 2. Enable Developer mode
+# 3. Click "Load unpacked"
+# 4. Select this folder
+```
 
 ## License
 
@@ -229,25 +308,42 @@ MIT License - see LICENSE file for details.
 
 ## Support
 
+Need help or found a bug?
+
 - 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/grammar-agent/issues)
-- 💬 **Questions**: [GitHub Discussions](https://github.com/yourusername/grammar-agent/discussions)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/grammar-agent/discussions)
 - 📧 **Email**: support@grammagent.com
+
+## Security
+
+To report security vulnerabilities, please email security@grammagent.com
+
+**Keep your API key secure:**
+- Never share your API key publicly
+- Never commit it to version control
+- Regenerate if compromised
+- Monitor usage at [OpenAI Dashboard](https://platform.openai.com/usage)
 
 ## Acknowledgments
 
-- Powered by [OpenAI](https://openai.com/)
-- Built with vanilla JavaScript
+- Grammar and logic correction powered by [OpenAI GPT-4o Mini](https://openai.com/)
 - Icons generated with HTML Canvas
+- Inspired by minimalist design principles
 
-## Security Note
+## Changelog
 
-Keep your API key secure:
-- Never share your API key
-- Never commit it to version control
-- Regenerate if compromised at [OpenAI Platform](https://platform.openai.com/api-keys)
+### Version 1.0.0 (Current)
+- ✨ GPT-4o Mini integration (10x cheaper, smarter)
+- ✨ Logic and context correction
+- ✨ Minimalist black & white UI
+- ✨ Inline error feedback (no popups)
+- ✨ 5000 character limit
+- ✨ Settings panel with gear icon
+- ✨ Privacy-focused (no content scripts)
+- ✨ Compact 550px width
 
 ---
 
-**Made with ❤️ for better writing**
+**Made for better writing, with respect for your privacy**
 
 ⭐ Star this repo if you find it useful!

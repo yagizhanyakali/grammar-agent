@@ -1,6 +1,6 @@
 # Quick Start Guide 🚀
 
-Get Grammar Agent running in 5 minutes!
+Get Grammar Corrector running in 3 minutes!
 
 ## What You Need
 
@@ -33,7 +33,7 @@ Get Grammar Agent running in 5 minutes!
 
 4. **Select** the `grammar-agent` folder
 
-5. ✅ **Extension installed!** You'll see the icon in your toolbar
+5. ✅ **Extension installed!** You'll see "Grammar Corrector" in your toolbar
 
 ### Step 3: Setup API Key (1 minute)
 
@@ -44,26 +44,29 @@ Get Grammar Agent running in 5 minutes!
    - Copy the key (starts with "sk-")
 
 2. **Save API key in extension:**
-   - Click the Grammar Agent icon in Chrome toolbar
-   - Paste your API key in the "OpenAI API Key" field
-   - Click "Save"
-   - You'll see "API key saved successfully! 🎉"
+   - Click the Grammar Corrector icon in Chrome toolbar
+   - Settings panel will appear (or click ⚙️ icon)
+   - Paste your API key
+   - Click "Save Key"
+   - Settings panel will close automatically
 
 ### Step 4: Test It! (1 minute)
 
-1. **Type some text with errors:**
+1. **Type text with errors and logic issues:**
    ```
-   This are a test. I has many error in grammer.
+   I went to store yesterday. Tomorrow I bought milk.
+   It was expensive but cheap so I didn't buy it because I purchased it.
    ```
 
 2. **Click** "Correct Grammar" button
 
 3. **See the magic:**
    ```
-   This is a test. I have many errors in grammar.
+   I went to the store yesterday and bought milk.
+   It was expensive, so I decided not to purchase it.
    ```
 
-4. **Click** "Copy to Clipboard" to use the corrected text
+4. **Click the copy icon** (📋) to copy the corrected text
 
 🎉 **You're all set!**
 
@@ -71,32 +74,36 @@ Get Grammar Agent running in 5 minutes!
 
 ### Every Time You Need Grammar Correction:
 
-1. **Click** the Grammar Agent icon
-2. **Paste** your text
+1. **Click** the Grammar Corrector icon
+2. **Paste** your text (up to 5000 characters)
 3. **Click** "Correct Grammar"
-4. **Copy** the result
+4. **Click copy icon** to use the corrected text
 
-That's it! Simple and fast.
+That's it! Simple, fast, and clean.
 
 ## Tips
 
-💡 **Character Counter**: Watch the character count to track your text length
+💡 **Settings**: Click the ⚙️ icon anytime to access API key settings
 
-💡 **Clear Button**: Quickly clear both input and output with one click
+💡 **Character Limit**: Shows "0/5000" below input - max 5000 characters
 
-💡 **No Tracking**: This extension doesn't monitor your typing on websites - it only corrects what you explicitly paste into it
+💡 **Clear Button**: Click trash icon in input area to clear text
 
-💡 **Privacy**: Only your API key is stored. Your text is never saved.
+💡 **Copy Button**: Click copy icon in output area to copy corrected text
+
+💡 **No Tracking**: Extension doesn't monitor web pages - only corrects text you paste
+
+💡 **Privacy**: Only your API key is stored locally. Text is never saved.
 
 ## Common Issues
 
-### ❌ "Please save your OpenAI API key first"
+### ❌ Settings panel appears when clicking "Correct Grammar"
 
-**Fix**: You forgot Step 3! Enter your API key and click Save.
+**Fix**: No API key saved yet - enter your key and click "Save Key"
 
-### ❌ "Invalid API key"
+### ❌ Input shakes or shows error message
 
-**Fix**: Make sure you copied the complete key (starts with `sk-`)
+**Fix**: Empty input - type or paste text first, then click "Correct Grammar"
 
 ### ❌ "Quota exceeded"
 
@@ -110,8 +117,10 @@ That's it! Simple and fast.
 
 The extension is **FREE**, but OpenAI charges for API usage:
 
-- About **$0.001-0.002** per correction
-- A 500-word text costs less than 1 cent
+**GPT-4o Mini Pricing:**
+- About **$0.0002-0.0005** per correction (500 words)
+- **10x cheaper** than GPT-3.5-turbo
+- With $5 credit: ~10,000 corrections
 - OpenAI often gives **$5 free credit** for new accounts
 
 [Check current pricing →](https://openai.com/pricing)
