@@ -312,11 +312,11 @@ Need help or found a bug?
 
 - 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/grammar-agent/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/grammar-agent/discussions)
-- 📧 **Email**: support@grammagent.com
+- 📧 **Email**: yagizhanyakali@gmail.com
 
 ## Security
 
-To report security vulnerabilities, please email security@grammagent.com
+To report security vulnerabilities, please email yagizhanyakali@gmail.com
 
 **Keep your API key secure:**
 - Never share your API key publicly
