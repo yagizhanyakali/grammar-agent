@@ -27,9 +27,6 @@ Thumbs.db
 *.bak
 *.backup
 
-# Generated icons (users generate their own)
-icons/*.png
-
 # Extension packaging
 *.zip
 *.crx

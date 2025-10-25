@@ -36,11 +36,11 @@ body {
 
 .btn-settings {
   background: transparent;
-  border: 1px solid #e0e0e0;
+  border: none;
   padding: 6px;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,9 +48,13 @@ body {
 }
 
 .btn-settings:hover {
-  background: #f5f5f5;
-  border-color: #000;
+  background: rgba(0, 0, 0, 0.08);
   color: #000;
+}
+
+.btn-settings:active {
+  background: rgba(0, 0, 0, 0.12);
+  transform: scale(0.96);
 }
 
 /* API Section */

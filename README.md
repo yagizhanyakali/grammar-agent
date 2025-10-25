@@ -21,18 +21,13 @@ A minimalist Chrome extension for AI-powered grammar and logic correction using 
 
 ### Installation Steps
 
-1. **Generate Icons** (if not already present):
-   - Open `icons/generate_icons.html` in your browser
-   - Click "Download All Icons" button
-   - Move the 4 PNG files to the `icons/` folder
-
-2. **Load Extension**:
+1. **Load Extension**:
    - Open Chrome and go to `chrome://extensions/`
    - Enable "Developer mode" (toggle in top-right)
    - Click "Load unpacked"
    - Select the `grammar-agent` folder
 
-3. **Setup API Key** (First time):
+2. **Setup API Key** (First time):
    - Click the Grammar Corrector icon in your toolbar
    - The settings panel will auto-appear if no key is saved
    - Enter your OpenAI API key
@@ -115,8 +110,7 @@ grammar-agent/
 │   ├── icon32.png
 │   ├── icon48.png
 │   ├── icon128.png
-│   ├── icon.svg
-│   └── generate_icons.html
+│   └── icon.svg
 ├── README.md             # This file
 ├── QUICKSTART.md         # Quick setup guide
 ├── LICENSE               # MIT License
@@ -327,7 +321,6 @@ To report security vulnerabilities, please email yagizhanyakali@gmail.com
 ## Acknowledgments
 
 - Grammar and logic correction powered by [OpenAI GPT-4o Mini](https://openai.com/)
-- Icons generated with HTML Canvas
 - Inspired by minimalist design principles
 
 ## Changelog

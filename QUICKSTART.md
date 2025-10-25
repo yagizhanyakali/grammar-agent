@@ -7,23 +7,9 @@ Get Grammar Corrector running in 3 minutes!
 1. Google Chrome browser
 2. OpenAI API key ([Get one free here](https://platform.openai.com/api-keys))
 
-## Installation (5 Minutes)
+## Installation (3 Minutes)
 
-### Step 1: Generate Icons (2 minutes)
-
-1. **Open** `icons/generate_icons.html` in Chrome
-   - Double-click the file, or
-   - Drag and drop into Chrome
-
-2. **Click** "Download All Icons" button
-
-3. **Move** the 4 downloaded PNG files into the `icons/` folder:
-   - `icon16.png`
-   - `icon32.png`
-   - `icon48.png`
-   - `icon128.png`
-
-### Step 2: Install Extension (1 minute)
+### Step 1: Install Extension (1 minute)
 
 1. **Open** Chrome and go to: `chrome://extensions/`
 
@@ -35,7 +21,7 @@ Get Grammar Corrector running in 3 minutes!
 
 5. ✅ **Extension installed!** You'll see "Grammar Corrector" in your toolbar
 
-### Step 3: Setup API Key (1 minute)
+### Step 2: Setup API Key (1 minute)
 
 1. **Get your OpenAI API key:**
    - Go to: https://platform.openai.com/api-keys
@@ -50,7 +36,7 @@ Get Grammar Corrector running in 3 minutes!
    - Click "Save Key"
    - Settings panel will close automatically
 
-### Step 4: Test It! (1 minute)
+### Step 3: Test It! (1 minute)
 
 1. **Type text with errors and logic issues:**
    ```
@@ -108,10 +94,6 @@ That's it! Simple, fast, and clean.
 ### ❌ "Quota exceeded"
 
 **Fix**: Your OpenAI account needs credits. Add payment method at [OpenAI Billing](https://platform.openai.com/account/billing)
-
-### ❌ Icons look like puzzle pieces
-
-**Fix**: You skipped Step 1! Generate the PNG icons.
 
 ## How Much Does It Cost?
 
